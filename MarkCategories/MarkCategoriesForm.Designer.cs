@@ -46,9 +46,12 @@
 			this.button2 = new System.Windows.Forms.Button();
 			this.buttonApplyMarks = new System.Windows.Forms.Button();
 			this.buttonApplyAllMarks = new System.Windows.Forms.Button();
+			this.dataGridViewParts = new System.Windows.Forms.DataGridView();
+			this.labelParts = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridViewMarkCategories)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridViewNames)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridViewParts)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// pictureBox1
@@ -121,6 +124,7 @@
 			this.dataGridViewNames.RowTemplate.Height = 24;
 			this.dataGridViewNames.Size = new System.Drawing.Size(319, 235);
 			this.dataGridViewNames.TabIndex = 7;
+			this.dataGridViewNames.Click += new System.EventHandler(this.dataGridViewNames_Click);
 			// 
 			// textBoxSave
 			// 
@@ -168,7 +172,7 @@
 			// 
 			// buttonSelectPartsInModel
 			// 
-			this.buttonSelectPartsInModel.Location = new System.Drawing.Point(337, 444);
+			this.buttonSelectPartsInModel.Location = new System.Drawing.Point(337, 466);
 			this.buttonSelectPartsInModel.Name = "buttonSelectPartsInModel";
 			this.buttonSelectPartsInModel.Size = new System.Drawing.Size(140, 33);
 			this.buttonSelectPartsInModel.TabIndex = 13;
@@ -198,7 +202,7 @@
 			// 
 			// buttonApplyMarks
 			// 
-			this.buttonApplyMarks.Location = new System.Drawing.Point(337, 483);
+			this.buttonApplyMarks.Location = new System.Drawing.Point(337, 529);
 			this.buttonApplyMarks.Name = "buttonApplyMarks";
 			this.buttonApplyMarks.Size = new System.Drawing.Size(140, 33);
 			this.buttonApplyMarks.TabIndex = 16;
@@ -208,7 +212,7 @@
 			// 
 			// buttonApplyAllMarks
 			// 
-			this.buttonApplyAllMarks.Location = new System.Drawing.Point(337, 522);
+			this.buttonApplyAllMarks.Location = new System.Drawing.Point(337, 568);
 			this.buttonApplyAllMarks.Name = "buttonApplyAllMarks";
 			this.buttonApplyAllMarks.Size = new System.Drawing.Size(140, 33);
 			this.buttonApplyAllMarks.TabIndex = 17;
@@ -216,11 +220,36 @@
 			this.buttonApplyAllMarks.UseVisualStyleBackColor = true;
 			this.buttonApplyAllMarks.Click += new System.EventHandler(this.buttonApplyAllMarks_Click);
 			// 
+			// dataGridViewParts
+			// 
+			this.dataGridViewParts.AllowUserToAddRows = false;
+			this.dataGridViewParts.AllowUserToDeleteRows = false;
+			this.dataGridViewParts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+			this.dataGridViewParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridViewParts.Location = new System.Drawing.Point(484, 366);
+			this.dataGridViewParts.Name = "dataGridViewParts";
+			this.dataGridViewParts.ReadOnly = true;
+			this.dataGridViewParts.RowTemplate.Height = 24;
+			this.dataGridViewParts.Size = new System.Drawing.Size(518, 235);
+			this.dataGridViewParts.TabIndex = 18;
+			this.dataGridViewParts.Click += new System.EventHandler(this.dataGridViewParts_Click);
+			// 
+			// labelParts
+			// 
+			this.labelParts.AutoSize = true;
+			this.labelParts.Location = new System.Drawing.Point(483, 346);
+			this.labelParts.Name = "labelParts";
+			this.labelParts.Size = new System.Drawing.Size(127, 17);
+			this.labelParts.TabIndex = 19;
+			this.labelParts.Text = "Parts List by Name";
+			// 
 			// MarkCategoriesForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1014, 613);
+			this.Controls.Add(this.labelParts);
+			this.Controls.Add(this.dataGridViewParts);
 			this.Controls.Add(this.buttonApplyAllMarks);
 			this.Controls.Add(this.buttonApplyMarks);
 			this.Controls.Add(this.button2);
@@ -239,12 +268,14 @@
 			this.Controls.Add(this.dataGridViewMarkCategories);
 			this.Controls.Add(this.pictureBox1);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.MaximumSize = new System.Drawing.Size(1032, 659);
 			this.Name = "MarkCategoriesForm";
 			this.Text = "Mark Categories";
 			this.Load += new System.EventHandler(this.MarkCategoriesForm_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridViewMarkCategories)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridViewNames)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridViewParts)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -269,6 +300,8 @@
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Button buttonApplyMarks;
 		private System.Windows.Forms.Button buttonApplyAllMarks;
+		private System.Windows.Forms.DataGridView dataGridViewParts;
+		private System.Windows.Forms.Label labelParts;
 	}
 }
 

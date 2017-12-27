@@ -1,0 +1,62 @@
+[
+  {
+    "Id": 1,
+    "Name": "BEAM",
+    "AssemblyNumber": {
+      "Prefix": "B",
+      "StartNumber": 1000
+    },
+    "PartNumber": {
+      "Prefix": "x",
+      "StartNumber": 1
+    },
+    "HasPhase": true,
+    "HasDash": true,
+    "Parts": []
+  },
+  {
+    "Id": 2,
+    "Name": "COLUMN",
+    "AssemblyNumber": {
+      "Prefix": "C",
+      "StartNumber": 1000
+    },
+    "PartNumber": {
+      "Prefix": "x",
+      "StartNumber": 1
+    },
+    "HasPhase": true,
+    "HasDash": true,
+    "Parts": []
+  },
+  {
+    "Id": 3,
+    "Name": "GIRT",
+    "AssemblyNumber": {
+      "Prefix": "G",
+      "StartNumber": 1000
+    },
+    "PartNumber": {
+      "Prefix": "x",
+      "StartNumber": 1
+    },
+    "HasPhase": true,
+    "HasDash": true,
+    "Parts": []
+  },
+  {
+    "Id": 4,
+    "Name": "BRACE",
+    "AssemblyNumber": {
+      "Prefix": "D",
+      "StartNumber": 1000
+    },
+    "PartNumber": {
+      "Prefix": "x",
+      "StartNumber": 1
+    },
+    "HasPhase": true,
+    "HasDash": true,
+    "Parts": []
+  }
+]

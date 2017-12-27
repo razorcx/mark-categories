@@ -94,17 +94,15 @@
     <Compile Include="MarkCategoriesForm.Designer.cs">
       <DependentUpon>MarkCategoriesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MarkCategory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MarkCategoryView.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="MarkCategory.cs" />
+    <Compile Include="MarkCategoryView.cs" />
     <Compile Include="NameMarkCatergories.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RazorPart.cs" />
+    <Compile Include="RazorPartView.cs" />
     <EmbeddedResource Include="MarkCategoriesForm.resx">
       <DependentUpon>MarkCategoriesForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +116,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Resource Include="MarkCategories_Standard.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
