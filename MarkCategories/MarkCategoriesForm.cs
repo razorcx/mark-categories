@@ -4,9 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using Newtonsoft.Json;
 using Tekla.Structures;
-using Tekla.Structures.DrawingInternal;
 using Tekla.Structures.Model;
 using Tekla.Structures.Model.UI;
 
@@ -522,6 +520,11 @@ namespace MarkCategories
 				.ToList();
 
 			dataGridViewParts.DataSource = razorPartViews;
+		}
+
+		private void pictureBox1_Click(object sender, EventArgs e)
+		{
+			System.Diagnostics.Process.Start("http://razorcx.com");
 		}
 	}
 }
