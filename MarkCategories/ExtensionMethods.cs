@@ -1,19 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using Tekla.Structures.Model;
 
 namespace MarkCategories
 {
 	public static class ExtensionMethods
 	{
 		public static List<T> ToAList<T>(this IEnumerator enumerator)
-		{
+		{	
+			//if(enumerator is ModelObjectEnumerator)
+			//	((ModelObjectEnumerator) enumerator).SelectInstances = false;
+
 			var list = new List<T>();
 			while (enumerator.MoveNext())
 			{
-				var loop = (T)enumerator.Current;
-				if (loop != null)
-					list.Add(loop);
+				var current = enumerator.Current;
+				if (!(current is T)) continue;
+				list.Add((T)current);
 			}
 			return list;
 		}
